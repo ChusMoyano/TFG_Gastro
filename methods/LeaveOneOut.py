@@ -6,6 +6,7 @@ from sklearn.model_selection import LeaveOneOut
 
 from methods.Metrics import *
 from models.EfficientNetModel import EfficientNetModel
+from aumentations import Augmtetation
 
 
 class color:
@@ -39,13 +40,15 @@ def leave_one_out_binary(x, y, y_no_categorical, epochs, tam_batch, lr):
         x_train = x[t_v_i]
         y_train = y[t_v_i]
 
+        x_train_aug, y_train_aug = Augmtetation.augmentation(x_train, y_train, 100)
+
         x_test = x[test_i]
         # y_test = y[test_i]
 
         # no callbacks
         # h = models.fit(X_train, y_train,epochs = epocas ,batch_size= tam_batch, verbose=1)
 
-        h = model.fit(x_train, y_train,
+        h = model.fit(x_train_aug, y_train_aug,
                       epochs=epochs, batch_size=tam_batch,
                       verbose=0, callbacks=[efficient_net_model.get_early_stop()])
 

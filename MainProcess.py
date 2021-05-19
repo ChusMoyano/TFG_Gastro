@@ -21,7 +21,7 @@ if __name__ == "__main__":
     data_sets_names = ["X_WL", "X_NBI"]
     data_sets = [x_wl, x_nbi]
     labels = [y_b, ]
-    model_running = ModelRunning(epochs=50, batch_size=1, lr=0.00001)
+    model_running = ModelRunning(epochs=100, batch_size=32, lr=0.001)
     model_running.run_model(data_sets, data_sets_names, y_b, y_b_s)
 
     time2 = time.time()
