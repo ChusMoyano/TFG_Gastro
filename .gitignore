@@ -2,8 +2,8 @@ data_numpy/
 venv/
 change.sh
 .idea
-methods/__pycache__
-models/__pycache__
+src/methods/__pycache__
+src/models/__pycache__
 change.sh
 .ipynb_checkpoints
-aumentations/__pycache__/
+src/aumentations/__pycache__/

@@ -3,12 +3,14 @@ import time
 
 import tensorflow as tf
 
-from methods.LoadData import LoadData
-from methods.ModelRunning import ModelRunning
+from src.methods.LoadData import LoadData
+from src.methods.ModelRunning import ModelRunning
+
 
 def load_gpu():
     physical_devices = tf.config.list_physical_devices('GPU')
     tf.config.experimental.set_memory_growth(physical_devices[0], True)
+
 
 if __name__ == "__main__":
     load_gpu()

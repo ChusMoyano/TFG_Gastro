@@ -1,7 +1,7 @@
 import pandas as pd
 
-from methods.LeaveOneOut import leave_one_out_binary
-from methods.Metrics import create_confusion_matrix
+from src.methods.LeaveOneOut import leave_one_out_binary
+from src.methods.Metrics import create_confusion_matrix
 
 
 class ModelRunning:

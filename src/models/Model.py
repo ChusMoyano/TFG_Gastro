@@ -1,7 +1,7 @@
-from methods.LoadData import LoadData
+from src.methods.LoadData import LoadData
 from tensorflow.keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPooling2D
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.losses import categorical_crossentropy, binary_crossentropy
+from tensorflow.keras.losses import categorical_crossentropy
 from tensorflow.keras.optimizers import Adam
 
 

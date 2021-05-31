@@ -4,7 +4,7 @@ import numpy as np
 
 def augmentation(x, y, copies):
     augmented_data_x = []
-    augmented_labels_y = []
+    augmented_labels_y = np.full((0, 2), 0)
 
     transform = A.Compose([
         A.CLAHE(),
@@ -19,7 +19,8 @@ def augmentation(x, y, copies):
     ])
 
     for img, label in zip(x, y):
-        augmented_labels_y.append(np.full((copies + 1, 2), label))
+        new_y = np.full((copies + 1, 2), label)
+        augmented_labels_y = np.concatenate((augmented_labels_y, new_y))
         img *= 255
         img = img.astype(np.uint8)
         augmented_data_x.append(img)
