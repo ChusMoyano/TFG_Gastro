@@ -1,11 +1,8 @@
-data_numpy/
+data_numpy
 venv/
-<<<<<<< HEAD
 change.sh
 .idea
-
 methods/__pycache__
 models/__pycache__
-=======
 change.sh
->>>>>>> 43dca9a2fc4b9a995ff533174b7fec250116a96b
+.ipynb_checkpoints
